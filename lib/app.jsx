@@ -1,7 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// @flow
 
-class Todo extends React.Component {
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import TodoLists from './todolists';
+import CurrentTodo from './todo';
+
+class Main extends Component {
   constructor() {
     super();
   }
@@ -9,11 +13,14 @@ class Todo extends React.Component {
   render() {
     return (
       <div className='container'>
-        Hello world!!!
+        <div className='main'>
+          <TodoLists />
+          <CurrentTodo />
+        </div>
       </div>
     );
   }
 };
 
-ReactDOM.render(<Todo />,
+render(<Main />,
 		document.getElementById('react-container'));

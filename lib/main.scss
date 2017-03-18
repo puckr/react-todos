@@ -1,4 +1,23 @@
 $font : 'Roboto', sans-serif;
+$green : #557A4F;
+$activeTodo : #5E5E5E;
+$doneTodoBack : #E8E8E8;
+$doneTodo : #BABABA;
+$placeholder : #BABABA;
+$progressBar : #AEAEAE;
+$todoHeaders : #393939;
+$borderColor : #E5E5E5;
+$todoList : #343434;
+$mainBack : #5B5B59;
+$searchBack : #F6F6F6;
+$searchPlaceholder : #CECECE;
+$checkboxDone : #969696;
+
+@mixin centeredFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 * {
   font-family: $font;
@@ -9,4 +28,31 @@ $font : 'Roboto', sans-serif;
 
 html, body {
   height: 100%;
+  background-color: $mainBack
 };
+
+.container {
+  @include centeredFlex;
+  height: 100%;
+  width: 100%;
+  margin: 0px auto;
+  .main {
+    @include centeredFlex;
+    height: 82vh;
+    width: 62%;
+    margin-top: 60px;
+    background-color: white;
+    .todo-list {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      border: 1px solid red;
+    };
+    .todo {
+      display: flex;
+      flex: 2;
+      height: 100%;
+      border: 1px solid blue;
+    }
+  }
+}
