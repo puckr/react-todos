@@ -62,6 +62,7 @@ $todoShadow : #D9D9D9;
   }
   color: white;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 * {
@@ -212,7 +213,7 @@ input {
           color: $activeTodo;
           border-radius: 2px;
           box-shadow: 0px 2px 2px 1px $doneTodoBack;
-          &.done {
+          &.checked {
             background-color: $doneTodoBack;
             color: $doneTodo;
           };
@@ -255,7 +256,7 @@ input {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: calc(12vh - 2px);
+        min-height: 9vh;
         @include bordered;
         input {
           @include inputStyle;
